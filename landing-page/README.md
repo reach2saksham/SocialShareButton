@@ -24,7 +24,7 @@ Open [http://localhost:3000](http://localhost:3000). English is served at `/` an
 | `npm run lint`         | ESLint (Next.js core-web-vitals + TypeScript rules)                                                                 |
 | `npm run sync-library` | Copies `../src/social-share-button.{js,css}` into `public/vendor/` and re-pins the CDN version in `public/llms.txt` |
 
-The site **dogfoods the library**: the header's “Share” item and the “Click to Try Demo” live preview use the real `SocialShareButton` from `../src`, so library changes appear on the site immediately. The version badge, CDN snippets and the gzipped-size metric are all derived from `../package.json` and `../src` at build time (see `next.config.ts`) — never hard-code them.
+The site **dogfoods the library**: the header's “Share” item and the “Click to Try Demo” live preview use the real `SocialShareButton` from `../src`. `predev` copies the library once, before the dev server starts; if you edit `../src` while `npm run dev` is running, run `npm run sync-library` to pick up the change. The version badge, CDN snippets and the gzipped-size metric are all derived from `../package.json` and `../src` at build time (see `next.config.ts`) — never hard-code them.
 
 ---
 

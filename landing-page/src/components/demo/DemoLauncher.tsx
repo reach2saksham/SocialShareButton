@@ -132,11 +132,12 @@ function DemoDialog({ onClose }: { onClose: () => void }) {
 
   const onKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
-      // Let the library's own share modal handle Escape first when it is open.
-      if (document.querySelector(".social-share-modal-overlay.active")) return;
       if (event.key === "Escape") {
+        // Let the library's own share modal handle Escape first when it is open.
+        if (document.querySelector(".social-share-modal-overlay.active")) return;
         event.stopPropagation();
         onClose();
+        return;
       }
       if (event.key === "Tab" && panelRef.current) {
         const focusable = panelRef.current.querySelectorAll<HTMLElement>(
@@ -252,7 +253,7 @@ function DemoDialog({ onClose }: { onClose: () => void }) {
               label={t("style")}
               value={buttonStyle}
               onChange={setButtonStyle}
-              options={buttonStyles.map((style) => ({ value: style, label: style }))}
+              options={buttonStyles.map((style) => ({ value: style, label: t(`styles.${style}`) }))}
             />
 
             <fieldset>

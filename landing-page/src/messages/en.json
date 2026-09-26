@@ -42,7 +42,9 @@
     "title": "Everything a share button needs. Nothing it doesn't.",
     "zeroDeps": {
       "title": "Zero dependencies",
-      "description": "Pure vanilla JavaScript and one stylesheet, about {size} KB gzipped. No framework runtime, no icon font, no tracking SDK."
+      "description": "Pure vanilla JavaScript and one stylesheet, about {size} KB gzipped. No framework runtime, no icon font, no tracking SDK.",
+      "unit": "KB",
+      "dependencies": "dependencies: {count}"
     },
     "platforms": {
       "title": "Nine platforms, one button",
@@ -50,7 +52,12 @@
     },
     "themes": {
       "title": "Themes and styles built in",
-      "description": "Light and dark themes, four button styles and your own brand colors. No CSS required."
+      "description": "Light and dark themes, four button styles and your own brand colors. No CSS required.",
+      "styles": {
+        "primary": "Primary",
+        "default": "Default",
+        "compact": "Compact"
+      }
     },
     "analytics": {
       "title": "Privacy-first analytics",
@@ -302,7 +309,13 @@
     "hint": "Click the button to see the share dialog.",
     "noPlatforms": "Select at least one platform.",
     "shareTitle": "I just tried Social Share Button",
-    "shareDescription": "A zero-dependency share button for any website."
+    "shareDescription": "A zero-dependency share button for any website.",
+    "styles": {
+      "default": "Default",
+      "primary": "Primary",
+      "compact": "Compact",
+      "icon-only": "Icon only"
+    }
   },
   "Error": {
     "title": "Something went wrong",

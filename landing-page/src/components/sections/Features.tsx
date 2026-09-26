@@ -55,10 +55,10 @@ export function Features() {
         >
           <p className="font-mono text-5xl font-medium tracking-tighter text-foreground-primary">
             {libraryGzipKb}
-            <span className="ml-1 text-xl text-foreground-muted">KB</span>
+            <span className="ml-1 text-xl text-foreground-muted">{t("zeroDeps.unit")}</span>
           </p>
           <p className="mt-3 inline-flex rounded-full bg-accent-soft px-2.5 py-0.5 font-mono text-xs font-medium text-accent">
-            dependencies: 0
+            {t("zeroDeps.dependencies", { count: 0 })}
           </p>
         </Cell>
 
@@ -83,13 +83,13 @@ export function Features() {
         <Cell className="sm:col-span-2 sm:row-span-2" title={t("themes.title")} description={t("themes.description")}>
           <div className="grid grid-cols-2 gap-2" aria-hidden>
             <span className="grid h-9 place-items-center rounded-full bg-button-primary-bg text-xs font-semibold text-button-primary-text">
-              primary
+              {t("themes.styles.primary")}
             </span>
             <span className="grid h-9 place-items-center rounded-full bg-button-secondary-bg text-xs font-semibold text-foreground-primary">
-              default
+              {t("themes.styles.default")}
             </span>
             <span className="grid h-7 place-items-center self-center rounded-full bg-accent-soft text-[11px] font-semibold text-accent">
-              compact
+              {t("themes.styles.compact")}
             </span>
             <span className="grid size-9 place-items-center justify-self-center rounded-full bg-highlight text-xs font-semibold text-background-primary">
               ↗
