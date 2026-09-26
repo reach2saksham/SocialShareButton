@@ -156,7 +156,7 @@ We use Prettier for the library and ESLint for the website. Please run these bef
 The website in [`landing-page/`](landing-page/) is a Next.js 16 static site with Tailwind CSS v4, `next-intl` (English and Hindi) and `next-themes`:
 
 1. `cd landing-page && npm install`
-2. `npm run dev` and open http://localhost:3000 — the library in `../src` is copied in automatically, so library changes show up on the site.
+2. `npm run dev` and open http://localhost:3000 — the library in `../src` is copied in once when the dev server starts. If you edit the library while `npm run dev` is running, run `npm run sync-library` to update the site's copy.
 3. Put every user-visible string in **both** `src/messages/en.json` and `src/messages/hi.json`.
 4. Use the semantic theme tokens (`bg-background-primary`, `text-foreground-secondary`, …) instead of `dark:` utilities. See [`landing-page/public/brand/Brand.md`](landing-page/public/brand/Brand.md).
 
